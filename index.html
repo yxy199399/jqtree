@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jqtree</title>
+    <script type="text/javascript" src="js/lib/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/lib/jqtree.css">
+    <script type="text/javascript" src="js/lib/tree.jquery.js"></script>
+</head>
+<body>
+    <div id="treeData" data-url="http://localhost:8000/tree"></div>
+</body>
+<script type="text/javascript">
+
+    $(function () {
+        var url = "http://localhost:8000/";
+        $("#treeData").tree({
+
+        });
+        $("#treeData").get(0).dataset.url = "http://localhost:8000/tree?FID=" + "1";
+        console.log($("#treeData").get(0).dataset.url);
+    })
+
+</script>
+</html>
